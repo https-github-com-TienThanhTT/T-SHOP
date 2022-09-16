@@ -427,6 +427,7 @@ footer .main-footer {
     display: flex;
     flex-flow: column;
  }
+
  .information-card{
   height: 100%;
     position: relative;
