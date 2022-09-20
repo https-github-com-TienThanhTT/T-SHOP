@@ -1,5 +1,5 @@
 <?php
-class DB_driver
+class DB_connect
 {
     // Biến lưu trữ kết nối
     private $__conn;

@@ -1,14 +1,33 @@
-
-  
-  <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.css">
+    <link rel='stylesheet' href="/style.css"> 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/> 
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<div class="container">
+<?php 
+    include'include/header.php';
+    include'include/slider.php';
+?>
     <div class="row" style="text-align:center;padding:20px 0px">
       <div class="col">
-        <img src="./img/1.png" width="200px"height="200px" style="border-radius:50%">
+        <img src="./Public/img/1.png" width="200px"height="200px" style="border-radius:50%">
         <h1>PC</h1>
       </div>
 
       <div class="col">
-        <a href="./laptop.php"><img src="./img/2.jfif"200px" height="200px" style ="border-radius:50%" >
+        <a href="http://localhost:8080/T-Shop/laptop">
+        <img src="https://trangnguyencantho.com/wp-content/uploads/2020/10/bia-3-800x600.png"width="200px" height="200px" style ="border-radius:50%" >
         <h1>LAPTOP</h1></a>
       </div> 
     </div>
@@ -18,8 +37,7 @@
       <h1>Sản phẩm nổi bật</h1>
       <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
         <?php
-        $arr=$DB->get_list("SELECT * FROM product_gaming WHERE noibat=1 ");
-                  foreach($arr as $key =>$value){?>
+                  foreach($data['arr'] as $key =>$value){?>
                   <div class="col">
                     <div class="card h-100 shadow-sm"><?php echo '<img src="'.$value['tmp'].'"'.'class="card-img-top" alt="...">';?>
                       <div class="card-body">
@@ -43,8 +61,8 @@
                   </div>
                   <?php } ?>
                   <?php
-        $arr1=$DB->get_list("SELECT * FROM product_pc WHERE noibat=1 ");
-                  foreach($arr1 as $key =>$value){?>
+       
+                  foreach($data['arr1'] as $key =>$value){?>
                   <div class="col">
                     <div class="card h-100 shadow-sm"><?php echo '<img src="'.$value['tmp'].'"'.'class="card-img-top" alt="...">';?>
                       <div class="card-body">
@@ -119,7 +137,9 @@
         </ul>
       </div>
     </section>
-  </div>
-
-
-
+<?php 
+    include'include/footer.php';
+?>
+</div>
+</body>
+</html>

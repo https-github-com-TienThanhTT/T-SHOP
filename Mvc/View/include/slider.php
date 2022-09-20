@@ -7,7 +7,7 @@
                         <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active"> <img src="./Public/img/baner1.jfif" class="d-block w-100" alt="Wild Landscape" />
+                        <div class="carousel-item active"> <img src="https://images.fpt.shop/unsafe/fit-in/1200x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/1/637975909986535281_F-C1_1200x300-1.png" class="d-block w-100" alt="Wild Landscape" />
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
